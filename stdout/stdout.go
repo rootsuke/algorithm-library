@@ -5,8 +5,6 @@ import (
 	"strings"
 )
 
-func PrintSlice[T any](slice []T) {
-	res := fmt.Sprintf("%v", slice)
-	res = strings.Trim(res, "[]")
-	fmt.Println(res)
+func PrintIntSlice(slice []int) {
+	fmt.Println(strings.Trim(fmt.Sprint(slice), "[]"))
 }
