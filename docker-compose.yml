@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  go:
+    build: .
+    container_name: go
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
