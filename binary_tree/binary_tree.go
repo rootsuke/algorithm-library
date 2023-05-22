@@ -1,5 +1,7 @@
 package binary_tree
 
+import "fmt"
+
 type Node struct {
 	parent int
 	left   int
@@ -66,4 +68,40 @@ func FindRootNodeIndex(tree []Node) int {
 	}
 
 	return rootNodeIndex
+}
+
+func Preorder(tree []Node, id int) {
+	fmt.Printf(" %v", id)
+
+	if tree[id].left != -1 {
+		Preorder(tree, tree[id].left)
+	}
+
+	if tree[id].right != -1 {
+		Preorder(tree, tree[id].right)
+	}
+}
+
+func Inorder(tree []Node, id int) {
+	if tree[id].left != -1 {
+		Inorder(tree, tree[id].left)
+	}
+
+	fmt.Printf(" %v", id)
+
+	if tree[id].right != -1 {
+		Inorder(tree, tree[id].right)
+	}
+}
+
+func Postorder(tree []Node, id int) {
+	if tree[id].left != -1 {
+		Postorder(tree, tree[id].left)
+	}
+
+	if tree[id].right != -1 {
+		Postorder(tree, tree[id].right)
+	}
+
+	fmt.Printf(" %v", id)
 }
