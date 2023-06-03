@@ -1,1 +1,1 @@
-This is algorithm library make by Go.
+This is Algorithm library written in Go.
