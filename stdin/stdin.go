@@ -29,10 +29,19 @@ func (s *Scanner) nextInt() int {
 	}
 	return i
 }
+
 func (s *Scanner) nextIntSlice(size int) []int {
 	res := make([]int, size)
 	for i := 0; i < size; i++ {
 		res[i] = s.nextInt()
+	}
+	return res
+}
+
+func (s *Scanner) nextStrSlice(size int) []string {
+	res := make([]string, size)
+	for i := 0; i < size; i++ {
+		res[i] = s.nextStr()
 	}
 	return res
 }
